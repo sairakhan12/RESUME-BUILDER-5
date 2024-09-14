@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="resume-form" class="form-section">
+            <h2>Resume Builder</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="username" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <textarea id="skills" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" rows="4" required></textarea>
+            </div>
+            <div class="form-group" >
+                <label for="profile-picture">Profile Picture:</label>
+                <input type="file" id="profile-picture" accept="image/*">
+            </div>
+            ,<br>
+            <button type="submit">Generate Resume</button><br><hr>
+            <button onclick="generateLink()">Generate Resume Link</button>
+
+    <div class="output" id="output"></div>
+            
+        </form>
+
+        <section id="resume-preview" class="resume-section">
+            <h3>Resume Preview</h3>
+            <img id="preview-profile-picture" alt="Profile Picture">
+            <div id="preview-name"></div>
+            <div id="preview-email"></div>
+            <div id="preview-phone"></div>
+            <div id="preview-education"></div>
+            <div id="preview-skills"></div>
+            <div id="preview-experience"></div>
+            <button id="download-pdf">Download PDF</button>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

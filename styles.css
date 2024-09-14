@@ -1,0 +1,105 @@
+/* Cute pastel theme for a fun, girly look */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #060606; /* Bright pink text */
+  }
+
+  .container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fffafc; /* Soft white */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    border: 2px solid #ff99cc; /* Pretty border */
+  }
+
+  h2 {
+    text-align: center;
+    color: #060606; /* Pink text for the heading */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  label {
+    color: #080808;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #fcd6e9; /* Focus on input fields with pink border */
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fcbddc; /* Pink button */
+    color: rgb(4, 4, 4);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color: #f9bddb; /* Darker pink on hover */
+  }
+
+  .output {
+    padding: 10px;
+    background-color: #ffebf5;
+    border: 1px solid #fac4df;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    color: #080808;
+  }
+
+  .output a {
+    color: #fdc7e2;
+    text-decoration: none;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      width: 90%;
+    }
+  }
